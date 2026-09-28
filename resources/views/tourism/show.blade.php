@@ -1,0 +1,1 @@
+@extends('layouts.app') @section('content')<h1>{{$destination->name}}</h1><div class="card"><p>{{$destination->description}}</p><p>Tiket: Rp{{number_format($destination->ticket_price,0,',','.')}}</p><div id="map"></div></div><script>initMap('map',[{lat:{{$destination->latitude}},lng:{{$destination->longitude}},name:'{{$destination->name}}'}]);</script>@endsection

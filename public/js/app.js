@@ -1,0 +1,1 @@
+function initMap(id,points=[]){const el=document.getElementById(id);if(!el)return;const map=L.map(id).setView([-0.79,100.65],11);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);points.forEach(p=>L.marker([p.lat,p.lng]).addTo(map).bindPopup(p.name));}
